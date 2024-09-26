@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Pane: List of questions -->
+        <div class="left-pane">
+            <h2>Questions</h2>
+            <ul id="questions-list">
+                <!-- Questions will be appended here -->
+            </ul>
+        </div>
+
+        <!-- Right Pane: Question form and responses -->
+        <div class="right-pane">
+            <!-- Question Form (Default View) -->
+            <div id="question-form">
+                <h2>Ask a Question</h2>
+                <form id="add-question-form">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required><br><br>
+                    
+                    <label for="question">Question:</label>
+                    <textarea id="question" required></textarea><br><br>
+                    
+                    <button type="submit">Submit Question</button>
+                </form>
+            </div>
+
+            <!-- Question and Responses View (Dynamic View) -->
+            <div id="question-view" style="display: none;">
+                <h2 id="question-title"></h2>
+                <p id="question-text"></p>
+                
+                <h3>Responses</h3>
+                <ul id="responses-list">
+                    <!-- Responses will be appended here -->
+                </ul>
+
+                <!-- Response Form -->
+                <form id="add-response-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required><br><br>
+                    
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" required></textarea><br><br>
+                    
+                    <button type="submit">Submit Response</button>
+                </form>
+
+                <button id="resolve-button">Resolve</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
